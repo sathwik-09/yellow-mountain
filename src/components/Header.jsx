@@ -8,6 +8,7 @@ export default function Header() {
       <nav className="hidden md:flex gap-4">
         <Link to="/about"><Button className="cursor-pointer" variant="ghost">About</Button></Link>
         <Link to="/services"><Button className="cursor-pointer" variant="ghost">Services</Button></Link>
+        <Link to="/partners"><Button className="cursor-pointer" variant="ghost">Partners</Button></Link>
         <Link to="/contact"><Button className="cursor-pointer" variant="ghost">Contact</Button></Link>
         <Link to="/login"><Button className="cursor-pointer" variant="ghost">Sign in</Button></Link>
         <Link to="/signup"><Button className="cursor-pointer" variant="ghost">Sign up</Button></Link>
