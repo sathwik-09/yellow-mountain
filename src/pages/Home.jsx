@@ -64,29 +64,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-12 text-center">
+      <section className="px-6 py-10 text-center">
         <h3 className="text-xl font-bold mb-8">
           Trusted by forward-thinking brands
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-10">
-          <img src="/assets/ezynest.svg" alt="EzyNest" className="h-15" />
-          <img src="/assets/teksquilt.png" alt="TeksQuilt" className="h-15" />
+          <img src="/assets/ezynest.svg" title="Ezynest" alt="Ezynest" className="h-15" />
+          <img src="/assets/teksquilt.png" alt="TeksQuilt" title="TeksQuilt" className="h-15" />
           <img
             src="/assets/OMV-america.png"
             alt="OMV America"
+            title="OMV America"
             className="h-15"
           />
-          <img src="/assets/YBR Infra.png" alt="YBR Infra" className="h-15" />
+          <img src="/assets/YBR Infra.png" alt="YBR Infra" title="YBR Infra" className="h-15" />
           <img
             src="/assets/Vaarahi-Infra.png"
             alt="Vaarahi Infra"
+            title="Vaarahi Infra"
             className="h-20"
           />
-          <img src="/assets/SuperPill.png" alt="SuperPill" className="h-15" />
+          <img src="/assets/SuperPill.png" alt="SuperPill" title="SuperPill" className="h-15" />
         </div>
       </section>
 
-      <section className="bg-gray-100 py-20 px-6">
+      <section className=" py-16 px-6">
         <h2 className="text-3xl font-semibold text-center mb-10">
           How It Works
         </h2>
