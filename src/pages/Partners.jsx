@@ -3,21 +3,58 @@ import { motion } from "framer-motion";
 
 export default function Partners() {
   const ITlogos = [
-    { src: "/assets/ezynest.svg", alt: "EzyNest", title: "EzyNest", href: "https://www.ezynest.com/" },
-    { src: "/assets/teksquilt.png", alt: "TeksQuilt", title: "TeksQuilt", href: "https://www.teksquilt.com/" },
-    { src: "/assets/OMV-america.png", alt: "OMV America", title: "OMV America", href: "https://www.omvamerica.com/" },
-    { src: "/assets/shswift.png", alt: "YBR Infra", title: "YBR Infra", href: "https://shswift-mk3vp2moo9u7p56p.builder-preview.com/" },
+    {
+      src: "/assets/ezynest.svg",
+      alt: "EzyNest",
+      title: "EzyNest",
+      href: "https://www.ezynest.com/",
+    },
+    {
+      src: "/assets/teksquilt.png",
+      alt: "TeksQuilt",
+      title: "TeksQuilt",
+      href: "https://www.teksquilt.com/",
+    },
+    {
+      src: "/assets/OMV-america.png",
+      alt: "OMV America",
+      title: "OMV America",
+      href: "https://www.omvamerica.com/",
+    },
+    {
+      src: "/assets/shswift.png",
+      alt: "SHSwift",
+      title: "SHSwift",
+      href: "https://shswift-mk3vp2moo9u7p56p.builder-preview.com/",
+    },
   ];
 
   const RealEstateLogos = [
-    { src: "/assets/Vaarahi-Infra.png", alt: "Vaarahi Infra", title: "Vaarahi Infra" },
+    {
+      src: "/assets/Vaarahi-Infra.png",
+      alt: "Vaarahi Infra",
+      title: "Vaarahi Infra",
+    },
     { src: "/assets/YBR Infra.png", alt: "YBR Infra", title: "YBR Infra" },
-    { src: "/assets/Ira-Enclave.png", alt: "Ira Enclave", title: "Ira Enclave" },
+    {
+      src: "/assets/Ira-Enclave.png",
+      alt: "Ira Enclave",
+      title: "Ira Enclave",
+    },
   ];
 
   const otherLogos = [
-    { src: "/assets/SuperPill.png", alt: "SuperPill", title: "SuperPill", href: "https://www.superpill.com/" },
-    { src: "/assets/sapta-vahana.png", alt: "Sapta Vahana", title: "Sapta Vahana" },
+    {
+      src: "/assets/SuperPill.png",
+      alt: "SuperPill",
+      title: "SuperPill",
+      href: "https://www.superpill.com/",
+    },
+    {
+      src: "/assets/sapta-vahana.png",
+      alt: "Sapta Vahana",
+      title: "Sapta Vahana",
+    },
   ];
 
   const renderLogos = (logos) => (
