@@ -61,7 +61,7 @@ export default function ContactPage() {
                 <Input name="contact" type="number" placeholder="Contact Number" className="p-5" required />
                 <Input name="subject" type="text" placeholder="Subject" className="p-5" />
                 <Textarea name="message" placeholder="Your message..." className="p-5" rows={6} required />
-                <Button type="submit" size="lg" className="w-full">
+                <Button type="submit" size="lg" className="w-full cursor-pointer">
                   Send Message
                 </Button>
                 {result && (
