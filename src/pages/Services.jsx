@@ -1,53 +1,58 @@
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
     id: 1,
     title: "Business Growth Marketing",
-    description: "Strategic marketing solutions focused on helping businesses build strong brand identities, attract ideal customers, and drive sustainable growth",
+    img: "/assets/business-growth-strategy.jpg",
+    description:
+      "Strategic marketing solutions focused on helping businesses build strong brand identities, attract ideal customers, and drive sustainable growth.",
     details: [
       "Brand Strategy & Positioning",
       "Market Research & Competitor Analysis",
       "Lead Generation Campaigns",
       "SEO & Digital Advertising",
-      "Social Media Strategy & Management"
-    ]
+      "Social Media Strategy & Management",
+    ],
   },
   {
     id: 2,
     title: "IT Solutions",
-    description: "Targeted marketing services crafted specifically for IT and tech firms to enhance visibility, generate qualified leads, and drive client acquisition.",
+    img: "/assets/IT-solutions.jpg",
+    description:
+      "Targeted marketing services crafted specifically for IT and tech firms to enhance visibility, generate qualified leads, and drive client acquisition.",
     details: [
       "B2B Marketing for Tech Firms",
       "Cloud Migration",
       "Website Optimization & User Experience",
       "Cybersecurity",
-      "Technical SEO & Paid Search"
-    ]
+      "Technical SEO & Paid Search",
+    ],
   },
   {
     id: 3,
     title: "Product Development",
-    description: "Complete marketing support to ensure your product reaches the right audience, makes a strong impact at launch, and remains competitive in the market.",
+    img: "/assets/product-dev.jpg",
+    description:
+      "Complete marketing support to ensure your product reaches the right audience, makes a strong impact at launch, and remains competitive in the market.",
     details: [
       "Financial Planning",
       "Product Positioning & Messaging",
       "Competitive & Market Analysis",
       "Go-To-Market Strategy",
-      "Brand Identity & UI Strategy"
-    ]
-  }
+      "Brand Identity & UI Strategy",
+    ],
+  },
 ];
 
-function Services() {
+export default function Services() {
   return (
-    <div className="py-16">
-      <div className="text-center mb-12 px-4">
+    <div className="py-16 bg-yellow-50">
+      
+      <div className="text-center mb-16 px-6">
         <h1 className="text-4xl md:text-5xl font-bold">
           Our <span className="text-primary">Services</span>
         </h1>
@@ -56,47 +61,67 @@ function Services() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-7xl mx-auto">
-        {services.map((service) => (
-          <Card key={service.id} className="hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-xl">{service.title}</CardTitle>
-              <p className="text-sm text-muted-foreground mt-2">{service.description}</p>
-            </CardHeader>
-            <Separator />
-            <CardContent className="pt-4 space-y-2">
-              {service.details.map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <Badge variant="secondary" className="text-xs px-2 py-1">
-                    {index + 1}
-                  </Badge>
-                  <span className="text-sm text-muted-foreground">{item}</span>
-                </div>
-              ))}
-              <div className="pt-4">
-                <Link to="/contact" className="text-primary">
-                  <Button className="w-full cursor-pointer">Learn More</Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+      
+      <div className="space-y-24 px-6 max-w-6xl mx-auto">
+        {services.map((service, index) => (
+          <div
+            key={service.id}
+            className={`grid md:grid-cols-2 gap-12 items-center ${
+              index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            }`}
+          >
+           
+            <div>
+              <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+                {service.title}
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed mb-4">
+                {service.description}
+              </p>
+              <ul className="space-y-2 mb-6">
+                {service.details.map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Badge variant="secondary" className="text-xs px-2 py-1 mt-1">
+                      {i + 1}
+                    </Badge>
+                    <span className="text-sm text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact">
+                <Button className="cursor-pointer">Learn More</Button>
+              </Link>
+            </div>
+
+          
+            <div className="w-full">
+              <img
+                src={service.img}
+                alt={service.title}
+                className="rounded-xl shadow-md w-full h-auto max-h-[400px] object-cover transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          </div>
         ))}
       </div>
 
-    
-      <div className="mt-24 text-center px-4">
-        <h2 className="text-3xl font-bold">Ready to take your business to the next level?</h2>
-        <p className="mt-2 text-lg text-muted-foreground">
+     
+      <div className="mt-32 text-center px-6">
+        <h2 className="text-3xl font-bold">
+          Ready to take your business to the next level?
+        </h2>
+        <p className="mt-2 text-lg text-muted-foreground max-w-xl mx-auto">
           Our expert team is ready to help you achieve your business goals.
         </p>
         <div className="mt-6">
-          <Link to="/contact" className="text-primary">
-            <Button size="lg" className="px-8 cursor-pointer"> Contact Us Today</Button>
+          <Link to="/contact">
+            <Button size="lg" className="px-8 cursor-pointer">
+              Contact Us Today
+            </Button>
           </Link>
         </div>
       </div>
     </div>
   );
 }
-
-export default Services;
