@@ -44,10 +44,11 @@ export default function AboutSection() {
         src="/assets/construction.jpg"
         alt="Background Illustration"
         className="absolute w-full h-full object-cover z-0"
+        loading="lazy"
       />
 
       
-      <div className="relative z-10 backdrop-blur-sm">
+      <div className="relative z-10">
         
         <section className="container max-w-4xl mx-auto px-6 py-24 text-center space-y-6">
           <Card className="border-none bg-transparent shadow-none">
