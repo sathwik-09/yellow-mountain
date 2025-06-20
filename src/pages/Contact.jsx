@@ -58,7 +58,7 @@ export default function ContactPage() {
                   <Input name="last_name" type="text" placeholder="Last Name" className="p-5" />
                 </div>
                 <Input name="email" type="email" placeholder="Email Address" className="p-5" required />
-                <Input name="contact" type="number" placeholder="Contact Number" className="p-5" required />
+                <Input name="contact" placeholder="Contact Number" className="p-5" required />
                 <Input name="subject" type="text" placeholder="Subject" className="p-5" />
                 <Textarea name="message" placeholder="Your message..." className="p-5" rows={6} required />
                 <Button type="submit" size="lg" className="w-full cursor-pointer">
