@@ -45,6 +45,7 @@ export default function AboutSection() {
         alt="Background Illustration"
         className="absolute w-full h-full object-cover z-0"
         loading="lazy"
+        decoding="async"
       />
 
       
@@ -63,12 +64,12 @@ export default function AboutSection() {
           </Card>
         </section>
 
-        
-        <section className="container max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="motion-safe:animate-none">
+        <section className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           {about.map((item) => (
             <Card
               key={item.id}
-              className="group bg-white border hover:shadow-xl transition-all hover:-translate-y-1 duration-300 rounded-xl overflow-hidden"
+              className="group bg-white border hover:shadow-xl transition-all hover:-translate-y-2 duration-300 rounded-xl overflow-hidden"
             >
               <CardHeader className="flex items-center gap-4">
                 <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
@@ -82,13 +83,15 @@ export default function AboutSection() {
                   src={item.img}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-48 object-cover rounded-lg mb-3 group-hover:scale-105 transition-transform duration-300"
+                  className="w-full aspect-video object-cover rounded-lg mb-3 motion-reduce:transition-none duration-300"
+                  decoding="async"
                 />
                 {item.description}
               </CardContent>
             </Card>
           ))}
         </section>
+        </div>
 
         
         <section className="bg-gray-50 py-20">
@@ -115,6 +118,7 @@ export default function AboutSection() {
                 alt="Our mission at Yellow Mountain"
                 className="rounded-xl shadow-md w-full h-auto max-h-[450px] object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
