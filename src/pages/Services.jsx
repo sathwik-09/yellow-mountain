@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -59,7 +59,7 @@ const services = [
       "Flyer & Brochure Distribution",
       "Hoardings / Billboards",
     ],
-  }
+  },
 ];
 
 export default function Services() {
@@ -73,8 +73,7 @@ export default function Services() {
           Comprehensive services designed to meet your business goals and needs.
         </p>
       </div>
-      
-      
+
       <div className="space-y-24 px-6 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div
@@ -83,7 +82,7 @@ export default function Services() {
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             }`}
           >
-          <div className="w-full">
+            <div className="w-full">
               <img
                 src={service.img}
                 alt={service.title}
@@ -91,7 +90,7 @@ export default function Services() {
                 loading="lazy"
               />
             </div>
-           
+
             <div>
               <h2 className="text-3xl font-semibold text-gray-900 mb-4">
                 {service.title}
@@ -102,25 +101,28 @@ export default function Services() {
               <ul className="space-y-2 mb-6">
                 {service.details.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <Badge variant="secondary" className="text-xs px-2 py-1 mt-1">
+                    <Badge
+                      variant="secondary"
+                      className="text-xs px-2 py-1 mt-1"
+                    >
                       {i + 1}
                     </Badge>
-                    <span className="text-sm text-muted-foreground">{item}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
               <Link to="/contact">
-                <Button className="cursor-pointer bg-yellow-300 hover:bg-yellow-500 text-black">Learn More</Button>
+                <Button className="cursor-pointer bg-yellow-300 hover:bg-yellow-500 text-black">
+                  Learn More
+                </Button>
               </Link>
             </div>
-
-          
-            
           </div>
         ))}
       </div>
 
-     
       <div className="mt-32 text-center px-6">
         <h2 className="text-3xl font-bold">
           Ready to take your business to the next level?
@@ -130,7 +132,10 @@ export default function Services() {
         </p>
         <div className="mt-6">
           <Link to="/contact">
-            <Button size="lg" className="cursor-pointer bg-yellow-300 hover:bg-yellow-500 text-black">
+            <Button
+              size="lg"
+              className="cursor-pointer bg-yellow-300 hover:bg-yellow-500 text-black"
+            >
               Contact Us Today
             </Button>
           </Link>
