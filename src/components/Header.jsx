@@ -20,7 +20,7 @@ export default function Header() {
       </Link>
 
       <nav className="hidden md:flex gap-4">
-        {["services", "partners", "contact", "about"].map((item) => (
+        {["services", "partners", "contact", "about", "career"].map((item) => (
           <Link key={item} to={`/${item}`}>
             <Button variant="ghost" className="hover:bg-amber-300 cursor-pointer">
               {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -43,7 +43,7 @@ export default function Header() {
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b shadow-md md:hidden z-40">
           <nav className="flex flex-col p-4 gap-2">
-            {["services", "partners", "contact", "about"].map((item) => (
+            {["services", "partners", "contact", "about", "career"].map((item) => (
               <Link
                 key={item}
                 to={`/${item}`}
